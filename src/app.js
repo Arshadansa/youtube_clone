@@ -21,11 +21,13 @@ app.use(cookieParser());
 import userRouter from "./routes/user.routes.js";
 import videoRouter from "./routes/video.routes.js"
 import subscriberRouter from "./routes/subscriber.routes.js"
+import commentRouter from "./routes/comments.routes.js"
 
 /// routers decalaration
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/videos",videoRouter)
 app.use("/api/v1/subscribers",subscriberRouter)
+app.use("/api/v1/comments",commentRouter)
 
 // Global error handler (should be after all routes)
 app.use((err, req, res, next) => {
